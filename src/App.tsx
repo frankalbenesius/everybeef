@@ -1,14 +1,15 @@
 import { useState } from "react";
+import { Beef } from "./components/Beef";
+
+const beefs = ["00BEEF", "0BEEF0", "BEEF00"];
 
 export function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
       <h1>Every Beef!</h1>
-      <button type="button" onClick={() => setCount((c) => c + 1)}>
-        Clicks: {count}
-      </button>
+      {beefs.map((beef) => (
+        <Beef key={beef} id={beef} />
+      ))}
     </div>
   );
 }
