@@ -1,21 +1,28 @@
-import { Container, Heading, Wrap, WrapItem } from "@chakra-ui/layout";
-import { Beef } from "./components/Beef";
-import { getAllBeefs } from "./util/getAllBeefs";
+import { Container } from "@chakra-ui/react";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import { BeefPage } from "./pages/BeefPage";
+import { IndexPage } from "./pages/IndexPage";
 
 export function App() {
-  const beefs = getAllBeefs();
   return (
-    <Container maxW="container.lg">
-      <Heading textAlign="center" py={4}>
-        every beef
-      </Heading>
-      <Wrap spacing={1} justify="center">
-        {beefs.map((beef) => (
-          <WrapItem key={beef}>
-            <Beef id={beef} />
-          </WrapItem>
-        ))}
-      </Wrap>
-    </Container>
+    <Router>
+      <Container maxW="container.lg">
+        <Switch>
+          <Route path="/beefs/:id">
+            <BeefPage />
+          </Route>
+          <Route exact path="/">
+            <IndexPage />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+      </Container>
+    </Router>
   );
 }
