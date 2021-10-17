@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { Beef } from "./components/Beef";
-
-const beefs = ["00BEEF", "0BEEF0", "BEEF00"];
+import { getAllBeefs } from "./util/getAllBeefs";
 
 export function App() {
+  const beefs = getAllBeefs();
   return (
     <div>
       <h1>Every Beef!</h1>
