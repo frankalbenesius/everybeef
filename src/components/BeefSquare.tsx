@@ -20,6 +20,11 @@ export const BeefSquare = ({ id }: Props) => {
         borderWidth="medium"
         borderColor="blackAlpha.500"
         borderStyle="inset"
+        transition="transform 0.5s ease"
+        _hover={{
+          transform: "rotate(7.5deg)",
+          transition: "transform 0.1s ease",
+        }}
       >
         <LinkOverlay href={`/beefs/${id}`}>{id}</LinkOverlay>
       </Flex>
