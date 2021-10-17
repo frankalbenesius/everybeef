@@ -1,0 +1,24 @@
+{
+  "name": "everybeef",
+  "version": "1.0.0",
+  "description": "for every beef, no matter how small",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankalbenesius/everybeef.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankalbenesius/everybeef/issues"
+  },
+  "homepage": "https://github.com/frankalbenesius/everybeef#readme",
+  "devDependencies": {
+    "parcel": "2.0.0"
+  }
+}
