@@ -1,13 +1,13 @@
 import { Box, Heading, Center } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { getAllBeefs } from "../util/getAllBeefs";
 
 const allBeefs = getAllBeefs();
 
 export const BeefPage = () => {
   const { id } = useParams<{ id: string }>();
-  const isValidBeef = allBeefs.includes(id);
+  const isValidBeef = allBeefs.includes(id || "");
 
   useEffect(() => {
     if (id && isValidBeef) {

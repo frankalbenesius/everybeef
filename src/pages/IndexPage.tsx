@@ -1,14 +1,6 @@
-import {
-  Box,
-  Heading,
-  Wrap,
-  WrapItem,
-  Stack,
-  Button,
-  Center,
-} from "@chakra-ui/react";
+import { Box, Heading, Wrap, WrapItem, Button, Center } from "@chakra-ui/react";
 import React from "react";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { BeefSquare } from "../components/BeefSquare";
 import { getAllBeefs } from "../util/getAllBeefs";
 
@@ -35,12 +27,12 @@ export const IndexPage = () => {
 };
 
 const ImFeelingLuckyButton = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     const idx = Math.floor(Math.random() * allTheBeefs.length);
     const randomBeef = allTheBeefs[idx];
-    history.push(`/beefs/${randomBeef}`);
+    navigate(`/beefs/${randomBeef}`);
   };
 
   return (
