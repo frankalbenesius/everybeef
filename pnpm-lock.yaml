@@ -5,12 +5,15 @@ specifiers:
   '@chakra-ui/react': 2.4.1
   '@emotion/react': 11.4.1
   '@emotion/styled': 11.3.0
+  '@types/lodash': ^4.14.189
   '@types/react': ^18.0.25
   '@types/react-dom': ^18.0.9
   '@vitejs/plugin-react': ^2.2.0
+  colord: ^2.9.3
   framer-motion: 4.1.17
   husky: ^7.0.2
   lint-staged: ^11.2.3
+  lodash: ^4.17.21
   prettier: 2.4.1
   react: 18.2.0
   react-dom: 18.2.0
@@ -24,12 +27,15 @@ dependencies:
   '@chakra-ui/react': 2.4.1_fariym46m3x7fjcrhxi6l46lva
   '@emotion/react': 11.4.1_cuziicjcvwawlf5iuhzacuhqcy
   '@emotion/styled': 11.3.0_57rprcr5alydi7rewovuvu3ev4
+  colord: 2.9.3
   framer-motion: 4.1.17_biqbaboplfbrettd7655fr4n2y
+  lodash: 4.17.21
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.4.3_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
+  '@types/lodash': 4.14.189
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.9
   '@vitejs/plugin-react': 2.2.0_vite@3.2.4
@@ -1543,7 +1549,6 @@ packages:
 
   /@types/lodash/4.14.189:
     resolution: {integrity: sha512-kb9/98N6X8gyME9Cf7YaqIMvYGnBSWqEci6tiettE6iJWH1XdJz/PO8LB0GtLCG7x8dU3KWhZT+lA1a35127tA==}
-    dev: false
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
@@ -1777,6 +1782,10 @@ packages:
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
     dev: true
+
+  /colord/2.9.3:
+    resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
+    dev: false
 
   /colorette/1.4.0:
     resolution: {integrity: sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==}
@@ -2399,6 +2408,10 @@ packages:
   /lodash.pick/4.4.0:
     resolution: {integrity: sha512-hXt6Ul/5yWjfklSGvLQl8vM//l3FtyHZeuelpzK6mm99pNvN9yTDruNZPEJZD1oWrqo+izBmB7oUfWgcCX7s4Q==}
     dev: true
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
 
   /log-update/4.0.0:
     resolution: {integrity: sha512-9fkkDevMefjg0mmzWFBW8YkFP91OrizzkW3diF7CpG+S2EYdy4+TVfGwz1zeF8x7hCx1ovSPTOE9Ngib74qqUg==}
