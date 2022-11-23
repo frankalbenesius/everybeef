@@ -1,6 +1,6 @@
-import { Box, Heading, Center } from "@chakra-ui/react";
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Box, Heading, Flex, Text, Link } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { Link as RRLink, useParams } from "react-router-dom";
 import { getAllBeefs } from "../util/getAllBeefs";
 
 const allBeefs = getAllBeefs();
@@ -26,10 +26,20 @@ export const BeefPage = () => {
   }
 
   return (
-    <Box bg={`#${id}`}>
-      <Heading textAlign="center" py={4}>
+    <Flex
+      padding={4}
+      justifyContent="center"
+      flexDirection="column"
+      alignItems="center"
+      gap={4}
+    >
+      <Heading bg={`#${id}`} textAlign="center" p={4}>
         {id}
       </Heading>
-    </Box>
+      <Text>Truly one of our finest beefs.</Text>
+      <Link as={RRLink} to="/" css={{ color: "#22beef" }}>
+        Let's see some more beefs.
+      </Link>
+    </Flex>
   );
 };
