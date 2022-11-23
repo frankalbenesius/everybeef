@@ -13,7 +13,7 @@ import { Link as RRLink } from "react-router-dom";
 import { getAllBeefs } from "../util/getAllBeefs";
 import memoize from "lodash/memoize";
 
-import markUrl from "../img/beefify_mark.png";
+import markUrl from "../img/beefed_mark.png";
 
 import { colord, Colord, extend } from "colord";
 import labPlugin from "colord/plugins/lab";
@@ -79,7 +79,7 @@ function getOutputSrc(
     const markImg = new Image();
     markImg.src = markUrl;
     markImg.onload = () => {
-      ctx.drawImage(markImg, 0, 0);
+      ctx.drawImage(markImg, 5, canvasEl.height - 35);
 
       outputSrc = canvasEl.toDataURL();
       canvasEl.remove();
