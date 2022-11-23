@@ -1,6 +1,6 @@
 import { Box, Heading, Wrap, WrapItem, Button, Center } from "@chakra-ui/react";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BeefSquare } from "../components/BeefSquare";
 import { getAllBeefs } from "../util/getAllBeefs";
 
@@ -12,8 +12,11 @@ export const IndexPage = () => {
       <Heading textAlign="center" py={4}>
         every beef
       </Heading>
-      <Center mb={4}>
+      <Center mb={4} gap={2}>
         <ImFeelingLuckyButton />
+        <Button as={Link} to="/beefify" bgColor="#ffbeef">
+          Beefify an Image
+        </Button>
       </Center>
       <Wrap spacing={1} justify="center">
         {allTheBeefs.map((beef) => (
@@ -36,7 +39,7 @@ const ImFeelingLuckyButton = () => {
   };
 
   return (
-    <Button onClick={handleClick} colorScheme="purple">
+    <Button onClick={handleClick} bgColor="#b4beef">
       I'm Feeling Lucky
     </Button>
   );

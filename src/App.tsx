@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/react";
+import { Container, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import {
   createBrowserRouter,
@@ -6,6 +6,7 @@ import {
   useRouteError,
   Outlet,
 } from "react-router-dom";
+import { BeefifyPage } from "./pages/BeefifyPage";
 import { BeefPage } from "./pages/BeefPage";
 import { IndexPage } from "./pages/IndexPage";
 
@@ -18,25 +19,15 @@ const Root = () => {
 };
 
 const ErrorPage = () => {
-  const error: any = useRouteError();
-  console.error(error);
-
   return (
-    <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
-    </div>
+    <Container maxW="container.lg">
+      <Heading>404</Heading>
+      <Text>Beef not found.</Text>
+    </Container>
   );
 };
 
 const router = createBrowserRouter([
-  {
-    path: "/beefs/:id",
-    element: <BeefPage />,
-  },
   {
     path: "/",
     element: <Root />,
@@ -49,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "beefs/:id",
         element: <BeefPage />,
+      },
+      {
+        path: "beefify",
+        element: <BeefifyPage />,
       },
     ],
   },

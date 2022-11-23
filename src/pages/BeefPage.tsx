@@ -26,20 +26,14 @@ export const BeefPage = () => {
   }
 
   return (
-    <Flex
-      padding={4}
-      justifyContent="center"
-      flexDirection="column"
-      alignItems="center"
-      gap={4}
-    >
+    <Flex padding={4} justifyContent="center" flexDirection="column" gap={4}>
+      <Link as={RRLink} to="/" css={{ color: "#22beef" }}>
+        {`< `}Back 2 Beefs
+      </Link>
       <Heading bg={`#${id}`} textAlign="center" p={4}>
         {id}
       </Heading>
       <Text>Truly one of our finest beefs.</Text>
-      <Link as={RRLink} to="/" css={{ color: "#22beef" }}>
-        Let's see some more beefs.
-      </Link>
     </Flex>
   );
 };
