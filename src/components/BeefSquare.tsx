@@ -26,7 +26,7 @@ export const BeefSquare = ({ id }: Props) => {
           transition: "transform 0.1s ease",
         }}
       >
-        <LinkOverlay href={`/beefs/${id}`}>{id}</LinkOverlay>
+        <LinkOverlay href={`/beefs/${id}`}>#{id}</LinkOverlay>
       </Flex>
     </LinkBox>
   );

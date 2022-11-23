@@ -31,7 +31,7 @@ export const BeefPage = () => {
         {`< `}Back 2 Beefs
       </Link>
       <Heading bg={`#${id}`} textAlign="center" p={4}>
-        {id}
+        #{id}
       </Heading>
       <Text>Truly one of our finest beefs.</Text>
     </Flex>
